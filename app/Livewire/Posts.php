@@ -46,7 +46,7 @@ class Posts extends Component
     public function destroy()
     {
         Post::find($this->postId)->delete();
-        $this->reloadPost();
+        $this->reloadPost(); 
         Flux::modal("delete-post")->close();
     }
 
